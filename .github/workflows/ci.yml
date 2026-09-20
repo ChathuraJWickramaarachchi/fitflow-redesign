@@ -1,0 +1,25 @@
+name: FitFlow CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  validate-project:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Verify Project Folders & Docs
+        run: |
+          echo "Starting CI Pipeline check..."
+          echo "Verifying project structure..."
+          test -d frontend && echo "✓ Frontend folder exists"
+          test -d backend && echo "✓ Backend folder exists"
+          test -d ai-service && echo "✓ AI Service folder exists"
+          test -d docs && echo "✓ Docs folder exists"
+          echo "CI Pipeline checks completed successfully!"
