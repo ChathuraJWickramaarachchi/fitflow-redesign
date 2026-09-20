@@ -82,5 +82,5 @@ The purpose of this project is to redesign FitFlow by selecting suitable technol
 
 ## Status
 
-This repository is currently being developed as part of Lab Exercise 05.
+This repository is currently being developed as part of Lab Exercise 05...
 
